@@ -10,6 +10,12 @@
 <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
 <script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
 <script src="./js/Chart/Chart.js"></script>
+<script type="text/javascript" src="apps.bdimg.com/lib/htmlbox/htmlbox.colors.js"></script>  
+    <script type="text/javascript" src="apps.bdimg.com/lib/htmlbox/htmlbox.styles.js"></script>  
+    <script type="text/javascript" src="apps.bdimg.com/lib/htmlbox/htmlbox.syntax.js"></script>  
+    <script type="text/javascript" src="apps.bdimg.com/lib/htmlbox/htmlbox.undoredomanager.js"></script>  
+    <script type="text/javascript" src="apps.bdimg.com/lib/htmlbox/htmlbox.min.js"></script> 
+    <script type="text/javascript" src="ckeditor/ckeditor.js"></script>
 <style>
   .line{
      background:#fff;
@@ -18,6 +24,12 @@
   }
 
 </style>
+<script src="lib/jquery-1.8.3.min.js"></script>  
+    <script type="text/javascript" src="lib/htmlbox/htmlbox.colors.js"></script>  
+    <script type="text/javascript" src="lib/htmlbox/htmlbox.styles.js"></script>  
+    <script type="text/javascript" src="lib/htmlbox/htmlbox.syntax.js"></script>  
+    <script type="text/javascript" src="lib/htmlbox/htmlbox.undoredomanager.js"></script>  
+    <script type="text/javascript" src="lib/htmlbox/htmlbox.min.js"></script>  
 <title></title>
 </head>
 
@@ -41,37 +53,28 @@
   </div><!-- /.container-fluid -->
 </nav>
 </div>
-
-<div class="container-fluid" id="wrapper" style="width:220px;margin-top:-20px;display:block;padding-left:220px;position:relative">
-	<div style="margin-left:-220px;display:block;float:left" id="wrapper-sidebar" >
+<div >
+<center><input name="title" type="text"/></center>
+</div>
+<br>
+<br>
+<center><textarea name="content" row="500" cols="200"></textarea></center>
+<script type="text/javascript">CKEDITOR.replace('content');</script>
+<div></div>
+<div class="container-fluid" id="wrapper" style="width:220px;margin-top:20px;display:block;padding-left:220px;position:relative">
+	<div style="margin-right:20px;display:block;float:left" id="wrapper-sidebar" >
  		<nav  class="navbar navbar-default" style="background:#f8f8f8;border-color:#e7e7e7">
 		 <div id="navbar-default-sidebar-collapse" class="collapse navbar-collapse"  style="width:220px;position:relative;">
 				<ul id="side-bar" class="nav nav-stack">
 				 		
 				 		<li>
 				 			<a href="./boke.jsp?name=<%= request.getParameter("name")%>" style="color:#19ADEC">
-				 			  <span class="glyphicon glyphicon-comment"></span>&nbsp;发表的博客
+				 			  <span class="glyphicon glyphicon-comment"></span>&nbsp;发表
 				 			</a>
 				 		</li>
-				 		<li>
-				 			<a href="./write.jsp?name=<%= request.getParameter("name")%>" style="color:#19ADEC">
-				 			  <span class="glyphicon glyphicon-comment"></span>&nbsp;写博客
-				 			</a>
-				 		</li>
-				 		<li>
-				 			<a href="./config.jsp" style="color:#19ADEC">
-				 			  <span class="glyphicon glyphicon-cog"></span>&nbsp;设置
-				 			</a>
-				 		</li>
-				</ul>
+				 		</ul>
 		</div>
  	</nav>
   </div>
-
-		 	 	<ol class="breadcrumb" style="width:280px">
-		 	 	 	<li><a href="./boke.jsp">首页</a></li>	
-		 	 	 	<li class="active">Now Chat</li>		 	 	 	
-		 	 	</ol>
-
 </body>
 </html>
